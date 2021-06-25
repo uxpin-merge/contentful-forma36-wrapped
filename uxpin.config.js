@@ -42,7 +42,8 @@ module.exports = {
           'src/components/FormaFlex/FormaFlex.jsx',
           'src/components/FormaRadioButtonField/FormaRadioButtonField.jsx',
           // 'src/components/FormaCheckboxField/FormaCheckboxField.jsx',
-          'src/components/FormaModal/FormaModal.jsx'
+          'src/components/FormaModal/FormaModal.jsx',
+          'src/components/FormaCard/FormaCard.jsx'
         ],
       },
     ],
