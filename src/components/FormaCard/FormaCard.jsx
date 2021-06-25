@@ -20,13 +20,13 @@ Card.propTypes = {
   * */
   padding: PropTypes.oneOf(["none", "default", "large"]),
   /**
-  * The action to be performed when user clicks on the Card
-  * */
-  onClick: PropTypes.func,
-  /**
   * Applies selected styles to the element
   * */
   selected: PropTypes.bool,
+  /**
+  * The action to be performed when user clicks on the Card
+  * */
+   onClick: PropTypes.func,
 };
 
 Card.defaultProps = {
