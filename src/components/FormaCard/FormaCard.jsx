@@ -1,12 +1,12 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Card } from '@contentful/forma-36-react-components';
-const FormaCard = (props) => (
-  <Card {...props} >
+import { Card as CardM } from '@contentful/forma-36-react-components';
+const Card = (props) => (
+  <CardM {...props} >
     {props.children}
-  </Card>
+  </CardM>
 );
-FormaCard.propTypes = {
+Card.propTypes = {
   /**
   * The title of the entry. It will also be used as aria-label
   * */
@@ -29,8 +29,8 @@ FormaCard.propTypes = {
   selected: PropTypes.bool,
 };
 
-FormaCard.defaultProps = {
+Card.defaultProps = {
   children: "This is the Card’s content",
   title: "Title"
 };
-export { FormaCard as default };
+export { Card as default };

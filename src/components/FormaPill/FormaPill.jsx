@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Pill, Icon } from '@contentful/forma-36-react-components';
+import { Pill as PillM, Icon } from '@contentful/forma-36-react-components';
 
 const buttonIcons = [
   'Heading',
@@ -146,10 +146,10 @@ const buttonIcons = [
   'WarningTrimmed',
   'Workflows'
 ]
-function FormaPill(props) {
+function Pill(props) {
   const { draggable, closeable, dragIcon, ...other } = props;
   return (
-    <Pill
+    <PillM
       {...other}
       onClose={
         props.closeable
@@ -179,7 +179,7 @@ function FormaPill(props) {
 }
 
 
-FormaPill.propTypes = {
+Pill.propTypes = {
   /**
   * The text to display in the pill.
   * */
@@ -216,7 +216,7 @@ FormaPill.propTypes = {
 };
 
 
-FormaPill.defaultProps = {
+Pill.defaultProps = {
   label: "I am a pill",
   variant: "idle",
   dragIcon: null,
@@ -224,4 +224,4 @@ FormaPill.defaultProps = {
   onClose: () => undefined
 };
 
-export { FormaPill as default };
+export { Pill as default };

@@ -1,13 +1,13 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { GridItem } from '@contentful/forma-36-react-components';
+import { GridItem as GridItemM } from '@contentful/forma-36-react-components';
 
 
-const FormaGridItem = (props) => (
-  <GridItem {...props} />
+const GridItem = (props) => (
+  <GridItemM {...props} />
 );
 
-FormaGridItem.propTypes = {
+GridItem.propTypes = {
 
   /**
   * Child nodes to be rendered in the component */
@@ -35,8 +35,8 @@ FormaGridItem.propTypes = {
 
 
 
-FormaGridItem.defaultProps = {
+GridItem.defaultProps = {
 
 };
 
-export { FormaGridItem as default };
+export { GridItem as default };

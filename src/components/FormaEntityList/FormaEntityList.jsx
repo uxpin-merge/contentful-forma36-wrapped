@@ -1,17 +1,17 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { EntityList } from '@contentful/forma-36-react-components';
+import { EntityList as EntityListM } from '@contentful/forma-36-react-components';
 
 
-const FormaEntityList = (props) => (
-  <EntityList {...props} />
+const EntityList = (props) => (
+  <EntityListM {...props} />
 );
 
-FormaEntityList.propTypes = {
+EntityList.propTypes = {
   /**
    * @uxpinignoreprop
    */
   children: PropTypes.node,
 }
 
-export { FormaEntityList as default };
+export { EntityList as default };

@@ -1,14 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { DropdownList } from '@contentful/forma-36-react-components';
+import { DropdownList as DropdownListM } from '@contentful/forma-36-react-components';
 
 
-const FormaDropdownList = (props) => (
-  <DropdownList {...props} />
+const DropdownList = (props) => (
+  <DropdownListM {...props} />
 );
 
 
-FormaDropdownList.propTypes = {
+DropdownList.propTypes = {
     /**
     * @uxpinignoreprop
     */
@@ -29,8 +29,8 @@ FormaDropdownList.propTypes = {
 
 
 
-FormaDropdownList.defaultProps = {
+DropdownList.defaultProps = {
 
 };
 
-export { FormaDropdownList as default };
+export { DropdownList as default };

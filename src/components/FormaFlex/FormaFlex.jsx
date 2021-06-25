@@ -1,16 +1,16 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Flex, GridItem } from '@contentful/forma-36-react-components';
+import { Flex as FlexM, GridItem } from '@contentful/forma-36-react-components';
 
 
-const FormaFlex = (props) => (
-    <Flex {...props} />
+const Flex = (props) => (
+    <FlexM {...props} />
 );
 
 
 
 
-FormaFlex.propTypes = {
+Flex.propTypes = {
 
     /**
     * Class names to be appended to the className prop of the component: PropTypes.string,
@@ -348,8 +348,8 @@ FormaFlex.propTypes = {
 
 };
 
-FormaFlex.defaultProps = {
+Flex.defaultProps = {
 
 };
 
-export { FormaFlex as default };
+export { Flex as default };

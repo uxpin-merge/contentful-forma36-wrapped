@@ -1,12 +1,12 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { ValidationMessage } from '@contentful/forma-36-react-components';
+import { ValidationMessage as ValidationMessageM } from '@contentful/forma-36-react-components';
 
-const FormaValidationMessage = (props) => (
-  <ValidationMessage {...props}>{props.validationMessageText}</ValidationMessage>
+const ValidationMessage = (props) => (
+  <ValidationMessageM {...props}>{props.validationMessageText}</ValidationMessageM>
 );
 
-FormaValidationMessage.propTypes = {
+ValidationMessage.propTypes = {
   /**
    * The validation message to be displayed
    * @uxpinpropname  Text
@@ -14,8 +14,8 @@ FormaValidationMessage.propTypes = {
   validationMessageText: PropTypes.string,
 };
 
-FormaValidationMessage.defaultProps = {
+ValidationMessage.defaultProps = {
   validationMessageText: "Name is a required field"
 };
 
-export { FormaValidationMessage as default };
+export { ValidationMessage as default };

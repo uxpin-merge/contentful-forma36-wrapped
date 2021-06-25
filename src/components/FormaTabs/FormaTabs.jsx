@@ -1,22 +1,22 @@
 import * as PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import { Tabs } from '@contentful/forma-36-react-components';
+import { Tabs as TabsM } from '@contentful/forma-36-react-components';
 import { Tab } from '@contentful/forma-36-react-components';
 import { TabPanel } from '@contentful/forma-36-react-components';
 import { Button } from '@contentful/forma-36-react-components';
 
 import '@contentful/forma-36-react-components/dist/styles.css';
 
-function FormaTabs(props) {
+function Tabs(props) {
   const [selected, setSelected] = useState('first');
-  
+
   function handleClick() {
     alert("works");
     setSelected('second');
   }
   return (
     <div>
-      <Tabs {...props}>
+      <TabsM {...props}>
 
         {/* <Tab
           id="second"
@@ -29,7 +29,7 @@ function FormaTabs(props) {
         {React.Children.map(props.children, (child, index) => {
 <Button onClick={handleClick}>{child.props.children}</Button>
            })}
-      </Tabs>
+      </TabsM>
 
 
       {/* {selected === 'first' && (
@@ -47,7 +47,7 @@ function FormaTabs(props) {
 
 
 /* eslint-disable sort-keys */
-FormaTabs.propTypes = {
+Tabs.propTypes = {
     label: PropTypes.string,
 //   onClick: PropTypes.func,
 //   disabled: PropTypes.bool,
@@ -69,7 +69,7 @@ children: PropTypes.node,
 };
 /* eslint-enable sort-keys */
 
-FormaTabs.defaultProps = {
+Tabs.defaultProps = {
 //   disabled: false,
 //   iconDirection: 'left',
 //   mode: 'filled',
@@ -78,4 +78,4 @@ FormaTabs.defaultProps = {
 //   type: 'primary',
 };
 
-export { FormaTabs as default };
+export { Tabs as default };

@@ -1,10 +1,10 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { EntityListItem, DropdownListItem, DropdownList } from '@contentful/forma-36-react-components';
+import { EntityListItem as EntityListItemM, DropdownListItem, DropdownList } from '@contentful/forma-36-react-components';
 
 
 
-function FormaEntityListItem(props) {
+function EntityListItem(props) {
 
   const { cardDragHandlePropTypes, dropDownActive, children, ...other } = props;
 
@@ -18,7 +18,7 @@ function FormaEntityListItem(props) {
   // </DropdownList>;
 
   return (
-    <EntityListItem
+    <EntityListItemM
       {...other}
       cardDragHandleProptypes
       dropdownListElements={
@@ -31,7 +31,7 @@ function FormaEntityListItem(props) {
 }
 ;
 
-FormaEntityListItem.propTypes = {
+EntityListItem.propTypes = {
     /**
      * @uxpinignoreprop
      */
@@ -136,14 +136,14 @@ FormaEntityListItem.propTypes = {
     href: PropTypes.string,
 
     /**
-    * OnClick event 
+    * OnClick event
     */
     onClick: PropTypes.func,
 };
 
 
 
-FormaEntityListItem.defaultProps = {
+EntityListItem.defaultProps = {
   title: "This is the title",
   contentType: "pdf",
   description: "Description",
@@ -153,4 +153,4 @@ FormaEntityListItem.defaultProps = {
   dropDownActive: true,
 };
 
-export { FormaEntityListItem as default };
+export { EntityListItem as default };

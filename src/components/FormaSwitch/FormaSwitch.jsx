@@ -1,15 +1,15 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Switch } from '@contentful/forma-36-react-components';
+import { Switch as SwitchM } from '@contentful/forma-36-react-components';
 
-function FormaSwitch(props) {
+function Switch(props) {
   //State variable 'checked' set to true
   const [isActive, setActive] = React.useState(false);
   //On prop change (re render), set state 'active' to isChecked prop value
   React.useEffect(() => setActive(props.isChecked), [props]);
 
   return (
-    <Switch
+    <SwitchM
       {...props}
       isChecked={isActive}
       onToggle={setActive}
@@ -18,7 +18,7 @@ function FormaSwitch(props) {
 };
 
 
-FormaSwitch.propTypes = {
+Switch.propTypes = {
   /**
    * Text of Label
    */
@@ -46,10 +46,10 @@ FormaSwitch.propTypes = {
   onToggle: PropTypes.func
 };
 
-FormaSwitch.defaultProps = {
+Switch.defaultProps = {
   isChecked: false,
   size: "large",
   labelText: "Switch Label",
 };
 
-export { FormaSwitch as default };
+export { Switch as default };

@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { TextLink } from '@contentful/forma-36-react-components';
+import { TextLink as TextLinkM } from '@contentful/forma-36-react-components';
 const Icons = [
   'Heading',
   'ArrowDown',
@@ -147,12 +147,12 @@ const Icons = [
 ]
 
 
-const FormaTextLink = (props) => (
-  <TextLink {...props} />
+const TextLink = (props) => (
+  <TextLinkM {...props} />
 );
 
 
-FormaTextLink.propTypes = {
+TextLink.propTypes = {
   /**
   * The text to display as a link
   * */
@@ -183,7 +183,7 @@ FormaTextLink.propTypes = {
   * */
   disabled: PropTypes.bool,
   /**
-   * OnClick event 
+   * OnClick event
    */
   onClick: PropTypes.func,
 
@@ -199,9 +199,9 @@ FormaTextLink.propTypes = {
 
 };
 
-FormaTextLink.defaultProps = {
+TextLink.defaultProps = {
   text: "I am a text link",
   onClick: () => undefined
 };
 
-export { FormaTextLink as default };
+export { TextLink as default };

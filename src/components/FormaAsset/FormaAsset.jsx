@@ -1,14 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Asset } from '@contentful/forma-36-react-components';
+import { Asset as AssetM } from '@contentful/forma-36-react-components';
 
 
-const FormaAsset = (props) => (
-  <Asset {...props} />
+const Asset = (props) => (
+  <AssetM {...props} />
 );
 
 
-FormaAsset.propTypes = {
+Asset.propTypes = {
   /**
   * The type of asset being represented
   */
@@ -28,11 +28,11 @@ FormaAsset.propTypes = {
 };
 
 
-FormaAsset.defaultProps = {
+Asset.defaultProps = {
   type: "image",
   title: "A published asset",
   status: "published",
   src: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
 };
 
-export { FormaAsset as default };
+export { Asset as default };

@@ -1,10 +1,10 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Grid, GridItem } from '@contentful/forma-36-react-components';
+import { Grid as GridM, GridItem } from '@contentful/forma-36-react-components';
 
 //IF IN FUTURE WE WANT TO HAVE THE ABILITY TO ADD TEST BOXES AS CHILDREN OF GRID
 
-// const FormaGrid = (props) => {
+// const Grid = (props) => {
 //     const { exampleBoxes, exampleGridHeight, ...other } = props;
 //     const DemoBox = () => {
 //         // return <GridItem style={{background: '#eeeeee'}} >{exampleBoxes}</GridItem>;
@@ -28,13 +28,13 @@ import { Grid, GridItem } from '@contentful/forma-36-react-components';
 //     )
 // }
 
-const FormaGrid = (props) => (
-    <Grid {...props} />
+const Grid = (props) => (
+    <GridM {...props} />
 );
 
 
 
-FormaGrid.propTypes = {
+Grid.propTypes = {
     /**
     * @uxpinignoreprop
     * */
@@ -47,7 +47,7 @@ FormaGrid.propTypes = {
     * The number of grid columns (width will be equal)
     * or width of each column. Example: "100px, 200px"
     * */
-    columns: PropTypes.object,    
+    columns: PropTypes.object,
 
     /**
     * The number of grid rows (height will be equal)
@@ -104,17 +104,17 @@ FormaGrid.propTypes = {
     ]),
 
     /**
-     * Child nodes to be rendered in the component 
+     * Child nodes to be rendered in the component
      * @uxpinignoreprop */
     children: PropTypes.node,
-    
+
     /**
     * Sets display:inline-grid */
     inline: PropTypes.bool,
 };
 
-FormaGrid.defaultProps = {
+Grid.defaultProps = {
 
 };
 
-export { FormaGrid as default };
+export { Grid as default };

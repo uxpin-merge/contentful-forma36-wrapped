@@ -1,14 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { CopyButton } from '@contentful/forma-36-react-components';
+import { CopyButton as CopyButtonM } from '@contentful/forma-36-react-components';
 
 
-const FormaCopyButton = (props) => (
-  <CopyButton {...props} />
+const CopyButton = (props) => (
+  <CopyButtonM {...props} />
 );
 
 
-FormaCopyButton.propTypes = {
+CopyButton.propTypes = {
   /**
    * Tooltip text when hovering
    */
@@ -49,11 +49,11 @@ FormaCopyButton.propTypes = {
   onCopy: PropTypes.func,
 };
 
-FormaCopyButton.defaultProps = {
+CopyButton.defaultProps = {
   tooltipText: "Copy to clipboard",
   tooltipPlace: "top",
   tooltipCopiedText: "Copied!",
   copyValue: "Loren Ipsum",
 };
 
-export { FormaCopyButton as default };
+export { CopyButton as default };

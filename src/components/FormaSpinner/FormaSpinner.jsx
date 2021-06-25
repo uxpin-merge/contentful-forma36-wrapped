@@ -1,12 +1,12 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Spinner } from '@contentful/forma-36-react-components';
+import { Spinner as SpinnerM } from '@contentful/forma-36-react-components';
 
-const FormaSpinner = (props) => (
-  <Spinner {...props} />
+const Spinner = (props) => (
+  <SpinnerM {...props} />
 );
 
-FormaSpinner.propTypes = {
+Spinner.propTypes = {
   /**
   * The color of the spinner
   * */
@@ -21,9 +21,9 @@ FormaSpinner.propTypes = {
   customSize: PropTypes.number,
 };
 
-FormaSpinner.defaultProps = {
+Spinner.defaultProps = {
   color: "default",
   size: "default",
 };
 
-export { FormaSpinner as default };
+export { Spinner as default };

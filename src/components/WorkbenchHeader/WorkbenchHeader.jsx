@@ -8,7 +8,7 @@ const WorkbenchHeader = (props) => (
       actions={<Button buttonType="muted">{props.buttonLabel}</Button>}
       // description="Lorem Ipsum dolor sit amet."
       icon={<Icon icon={props.icon} />}
-     
+
     />
 );
 

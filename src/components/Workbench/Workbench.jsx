@@ -1,17 +1,17 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Workbench } from '@contentful/forma-36-react-components';
+import { Workbench as WorkbenchM } from '@contentful/forma-36-react-components';
 
 
 
-const FormaWorkbench = (props) => (
-  <Workbench {...props}>
+const Workbench = (props) => (
+  <WorkbenchM {...props}>
     {props.children}
-  </Workbench>
+  </WorkbenchM>
 );
 
 
-FormaWorkbench.propTypes = {
+Workbench.propTypes = {
 
   children: PropTypes.node,
 
@@ -21,8 +21,8 @@ FormaWorkbench.propTypes = {
 
 
 
-FormaWorkbench.defaultProps = {
+Workbench.defaultProps = {
 
 };
 
-export { FormaWorkbench as default };
+export { Workbench as default };

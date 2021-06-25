@@ -1,9 +1,9 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Modal } from '@contentful/forma-36-react-components';
+import { Modal as ModalM } from '@contentful/forma-36-react-components';
 import { Button } from '@contentful/forma-36-react-components';
 
-function FormaModal(props) {
+function Modal(props) {
   const [isShown, setShown] = React.useState(false);
   React.useEffect(() => setShown(props.isShown), [props]);
 
@@ -14,7 +14,7 @@ function FormaModal(props) {
     <React.Fragment>
       {/* <Button onClick={() => setShown(true)}>{props.buttonText}</Button> */}
 
-      {/* <Modal
+      {/* <ModalM
       modalContentProps={{
         className: 'additional-modal-content-class'
       }}
@@ -27,43 +27,43 @@ function FormaModal(props) {
       isShown={isShown}
     >
       Modal content. It is centered by default.
-    </Modal> */}
+    </ModalM> */}
 
 
-      <Modal isShown={isShown} >
+      <ModalM isShown={isShown} >
         {() => (
           <React.Fragment>
-            <Modal.Header title={props.title} onClose={() => setShown(false)}/>
-            <Modal.Content>{props.content}</Modal.Content>
-            
-           
- { (!hasActionButton && !hasCloseButton ) ? null : 
+            <ModalM.Header title={props.title} onClose={() => setShown(false)}/>
+            <ModalM.Content>{props.content}</ModalM.Content>
 
-            <Modal.Controls>
-            
-            { 
+
+ { (!hasActionButton && !hasCloseButton ) ? null :
+
+            <ModalM.Controls>
+
+            {
             // If hasActionButton = true, then display it
-            hasActionButton &&  
+            hasActionButton &&
             <Button buttonType="positive" onClick={props.onClick}>{actionButtonText}</Button>
             }
-            { 
+            {
             // If hasCloseButton = true, then display it
-            hasCloseButton &&  
+            hasCloseButton &&
             <Button buttonType="muted" onClick={() => setShown(false)}>{closeButtonText}</Button>
-            }              
+            }
 
-            </Modal.Controls>
+            </ModalM.Controls>
 
           }
 
           </React.Fragment>
         )}
-      </Modal> 
+      </ModalM>
     </React.Fragment>
   );
 }
 
-FormaModal.propTypes = {
+Modal.propTypes = {
   position: PropTypes.oneOf(["center", "top"]),
   size: PropTypes.oneOf(["small", "medium", "large"]),
   title: PropTypes.string,
@@ -78,7 +78,7 @@ FormaModal.propTypes = {
   onClick: PropTypes.func,
 };
 
-FormaModal.defaultProps = {
+Modal.defaultProps = {
   isShown: false,
   title: "Default modal",
   content: "Hello from controlled modal window",
@@ -88,4 +88,4 @@ FormaModal.defaultProps = {
   actionButtonText: "confirm",
 };
 
-export { FormaModal as default };
+export { Modal as default };

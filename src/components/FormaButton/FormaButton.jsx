@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Button } from '@contentful/forma-36-react-components';
+import { Button as ButtonM } from '@contentful/forma-36-react-components';
 const buttonIcons = [
   'Heading',
   'ArrowDown',
@@ -145,14 +145,14 @@ const buttonIcons = [
   'WarningTrimmed',
   'Workflows'
 ]
-const FormaButton = (props) => (
-  <Button {...props}>
+const Button = (props) => (
+  <ButtonM {...props}>
     {props.label}
-  </Button>
+  </ButtonM>
 );
 
 
-FormaButton.propTypes = {
+Button.propTypes = {
   /**
    * Button text
    * Below we change prop name in UXPin
@@ -207,20 +207,20 @@ FormaButton.propTypes = {
    * @uxpinpropname Dropdown
    */
   indicateDropdown: PropTypes.bool,
-  
+
   /**
-   * OnClick event 
+   * OnClick event
    */
   onClick: PropTypes.func,
 
   /**
-   * OnBlur event 
+   * OnBlur event
    */
   onBlur: PropTypes.func,
 };
 
 
-FormaButton.defaultProps = {
+Button.defaultProps = {
   label: "Button",
   buttonType: "primary",
   size: "medium",
@@ -228,7 +228,7 @@ FormaButton.defaultProps = {
   onChange: () => undefined
 };
 
-export { FormaButton as default };
+export { Button as default };
 
 
 

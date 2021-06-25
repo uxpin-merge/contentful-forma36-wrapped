@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Illustration } from '@contentful/forma-36-react-components';
+import { Illustration as IllustrationM } from '@contentful/forma-36-react-components';
 const illustations =[
   "Archive",
   "Audio",
@@ -14,22 +14,22 @@ const illustations =[
   "Video",
 ]
 
-const FormaIllustration = (props) => (
-  <Illustration {...props} />
+const Illustration = (props) => (
+  <IllustrationM {...props} />
 );
 
 
-FormaIllustration.propTypes = {
+Illustration.propTypes = {
   /**
   * The Illustration icon to display.
-  * 
+  *
   * */
   illustration: PropTypes.oneOf(illustations)
 }
 
 
-FormaIllustration.defaultProps = {
+Illustration.defaultProps = {
   illustration: "Archive",
 };
 
-export { FormaIllustration as default };
+export { Illustration as default };

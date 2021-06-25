@@ -1,24 +1,24 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { DropdownListItem } from '@contentful/forma-36-react-components';
+import { DropdownListItem as DropdownListItemM } from '@contentful/forma-36-react-components';
 
 
-const FormaDropdownListItem = (props) => {
+const DropdownListItem = (props) => {
   const { onClick, onMouseDown, onFocus, onLeave, onEnter, ...other } = props;
 
   return (
 
 
-    <DropdownListItem {...props.isTitle
+    <DropdownListItemM {...props.isTitle
       // If closeable prop = true
       ? { ...other }
       //else
-      : { ...props }}>{props.children}</DropdownListItem>
+      : { ...props }}>{props.children}</DropdownListItemM>
   )
 }
 
 
-FormaDropdownListItem.propTypes = {
+DropdownListItem.propTypes = {
   /**
    * The text of the dropdown list item
   * @uxpinpropname Text
@@ -82,9 +82,9 @@ FormaDropdownListItem.propTypes = {
 };
 
 
-FormaDropdownListItem.defaultProps = {
+DropdownListItem.defaultProps = {
 
 children: "I am a dropdown list item jack"
 };
 
-export { FormaDropdownListItem as default };
+export { DropdownListItem as default };

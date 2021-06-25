@@ -1,6 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Icon } from '@contentful/forma-36-react-components';
+import { Icon as IconM } from '@contentful/forma-36-react-components';
 
 const buttonIcons =[
   'Heading',
@@ -147,14 +147,14 @@ const buttonIcons =[
      'Workflows'
 ]
 
-const FormaIcons = (props) => (
-  <Icon {...props} />
+const Icon = (props) => (
+  <IconM {...props} />
 );
 
-FormaIcons.propTypes = {
+Icon.propTypes = {
   /**
   * The icon to display.
-  * 
+  *
   * */
   icon: PropTypes.oneOf(buttonIcons),
   /**
@@ -167,10 +167,10 @@ FormaIcons.propTypes = {
   color: PropTypes.oneOf(["primary", "secondary", "positive", "negative", "warning", "muted", "white"]),
 };
 
-FormaIcons.defaultProps = {
+Icon.defaultProps = {
 icon: "Star",
 size: "small",
 color: "primary"
 };
 
-export { FormaIcons as default };
+export { Icon as default };

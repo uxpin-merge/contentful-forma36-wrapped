@@ -1,18 +1,18 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Button, Dropdown, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
+import { Button, Dropdown as DropdownM, DropdownList, DropdownListItem } from '@contentful/forma-36-react-components';
 
-function FormaDropdown(props) {
+function Dropdown(props) {
   const [isOpen, setOpen] = React.useState(false);
    //On prop change (re render), set state 'open' to isOpen prop value
    React.useEffect(() => setOpen(props.isOpen), [props]);
-   
+
   const { triggerText, uxpinRef, ...other } = props;
   return (
-   
-    <Dropdown
+
+    <DropdownM
     {...other}
-    
+
       isOpen={isOpen}
       onClose={() => setOpen(false)}
       toggleElement={
@@ -21,7 +21,7 @@ function FormaDropdown(props) {
           buttonType="muted"
           indicateDropdown
           onClick={() => setOpen(!isOpen)}
-         
+
         >
           {triggerText}
         </Button>
@@ -29,12 +29,12 @@ function FormaDropdown(props) {
     >
       {props.children}
 
-    </Dropdown>
+    </DropdownM>
   );
 }
 
 
-FormaDropdown.propTypes = {
+Dropdown.propTypes = {
   /**
   The label to be displayed above the dropdown
   * @uxpinpropname Label
@@ -69,10 +69,10 @@ FormaDropdown.propTypes = {
 
 
 
-FormaDropdown.defaultProps = {
+Dropdown.defaultProps = {
   triggerText: "This is the button text",
   submenuToggleLabel: "Dropdown label",
   isOpen:false
 };
 
-export { FormaDropdown as default };
+export { Dropdown as default };
