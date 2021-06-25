@@ -4,6 +4,10 @@ import FormaRadioButton from '../FormaRadioButton';
 export default (
   <FormaRadioButton
     uxpId="forma-radio-button-1"
-    name="radio"
+    name="some name"
+    required={false}
+    checked={false}
+    disabled={false}
+    indeterminate={false}
   />
 );

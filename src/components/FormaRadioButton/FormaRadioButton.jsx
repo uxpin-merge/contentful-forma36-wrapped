@@ -30,14 +30,9 @@ FormaRadioButton.propTypes = {
 
   disabled: PropTypes.bool,
 
+  willBlurOnEsc: PropTypes.bool,
+
   indeterminate: PropTypes.bool,
-};
-
-
-
-FormaRadioButton.defaultProps = {
-  name: "radio",
-  checked: true,
 };
 
 export { FormaRadioButton as default };
