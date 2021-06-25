@@ -7,7 +7,7 @@ import FormaButton from '../../FormaButton/FormaButton';
 
 export default (
     <FormaTabs uxpId="tabs-1">
-        <FormaButton  uxpId="tab-1">Tab 1</FormaButton>
-        <FormaButton  uxpId="tab-2">Tab 2</FormaButton>
+        <FormaTab  uxpId="tab-1">Tab 1</FormaTab>
+        <FormaTab  uxpId="tab-2">Tab 2</FormaTab>
     </FormaTabs>
 );

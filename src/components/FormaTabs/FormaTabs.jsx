@@ -8,27 +8,38 @@ import { Button } from '@contentful/forma-36-react-components';
 import '@contentful/forma-36-react-components/dist/styles.css';
 
 function Tabs(props) {
-  const [selected, setSelected] = useState('first');
 
-  function handleClick() {
-    alert("works");
-    setSelected('second');
+  
+  const [selected, setSelected] = useState(props.selected);
+
+
+  function handleClick(tabId) {
+    alert(tabId);
+    setSelected(tabId);
+  
   }
   return (
     <div>
-      <TabsM {...props}>
+      <TabsM {...props} >
 
-        {/* <Tab
-          id="second"
-          selected={selected === 'second'}
-          onSelect={handleClick}
-        >
-          Second
-        </Tab> */}
-        {props.children}
-        {React.Children.map(props.children, (child, index) => {
-<Button onClick={handleClick}>{child.props.children}</Button>
-           })}
+      
+      
+        {React.Children.map(props.children, (child, index) => (
+          
+
+        <div value="" index={index}>
+          <Tab {...child.props}
+          id={index}
+          selected={
+            // TODO: Need to check if child.props.selected is also true
+            selected === index}
+          onSelect= {() =>handleClick(index)}
+          >{child.props.children}</Tab>
+
+        </div>
+      ))}
+
+
       </TabsM>
 
 
@@ -43,39 +54,22 @@ function Tabs(props) {
       )} */}
     </div>
   );
-      };
+};
 
 
 /* eslint-disable sort-keys */
 Tabs.propTypes = {
-    label: PropTypes.string,
-//   onClick: PropTypes.func,
-//   disabled: PropTypes.bool,
-//   type: PropTypes.oneOf(['primary', 'secondary', 'success', 'error', 'warning']),
-//   mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
-//   /** @uxpinignoreprop */
-//   title: PropTypes.string,
-//   /** @uxpinignoreprop */
-//   background: PropTypes.string,
-//   /**
-//    * @uxpinpropname Label
-//    */
-children: PropTypes.node,
-
-//   icon: PropTypes.node,
-//   iconDirection: PropTypes.oneOf(['left', 'right']),
-//   size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
-//   stretched: PropTypes.bool,
+  children: PropTypes.node,
+  dividerOrientation: PropTypes.oneOf(["horizontal", "vertical"]),
+  role: PropTypes.oneOf(["tablist", "navigation"]),
+  withDivider: PropTypes.bool,
+  // onSelect: PropTypes.func,
+  onClick: PropTypes.func
 };
 /* eslint-enable sort-keys */
 
 Tabs.defaultProps = {
-//   disabled: false,
-//   iconDirection: 'left',
-//   mode: 'filled',
-//   size: 'm',
-//   stretched: true,
-//   type: 'primary',
+
 };
 
 export { Tabs as default };
