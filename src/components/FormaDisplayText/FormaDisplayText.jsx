@@ -11,17 +11,25 @@ const DisplayText = (props) => (
 
 
 DisplayText.propTypes = {
+  /**
+   * The text to display
+   * @uxpinpropname  Text
+   */
   children: PropTypes.string,
-
+  /**
+   * The size of text
+   */
   size: PropTypes.oneOf(["large", "huge"]),
-
+  /**
+   * The html tag to use
+   */
   element: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"])
 };
 
 
 
 DisplayText.defaultProps = {
-  children: "Please change displayText",
+  children: "Display Text",
   size: "large",
   element: "h1"
 };
