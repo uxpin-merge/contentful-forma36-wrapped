@@ -39,6 +39,7 @@ module.exports = {
           'src/components/FormaTooltip/FormaTooltip.jsx',
           'src/components/FormaGrid/FormaGrid.jsx',
           'src/components/FormaGridItem/FormaGridItem.jsx',
+          'src/components/FormaFlex/FormaFlex.jsx',
           'src/components/FormaRadioButtonField/FormaRadioButtonField.jsx',
           // 'src/components/FormaCheckboxField/FormaCheckboxField.jsx',
           'src/components/FormaModal/FormaModal.jsx'
