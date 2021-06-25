@@ -1,22 +1,22 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Typography } from '@contentful/forma-36-react-components';
+import { Typography as TypographyM } from '@contentful/forma-36-react-components';
 
 
-const FormaTypography = (props) => (
-  <Typography {...props}>
+const Typography = (props) => (
+  <TypographyM {...props}>
     {props.children}
-  </Typography>
+  </TypographyM>
 );
 
 
-FormaTypography.propTypes = {
+Typography.propTypes = {
   children: PropTypes.node,
 };
 
 
 
-FormaTypography.defaultProps = {
+Typography.defaultProps = {
 };
 
-export { FormaTypography as default };
+export { Typography as default };

@@ -1,16 +1,16 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Paragraph } from '@contentful/forma-36-react-components';
+import { Paragraph as ParagraphM } from '@contentful/forma-36-react-components';
 
 
-const FormaParagraph = (props) => (
-  <Paragraph {...props}>
+const Paragraph = (props) => (
+  <ParagraphM {...props}>
     {props.children}
-  </Paragraph>
+  </ParagraphM>
 );
 
 
-FormaParagraph.propTypes = {
+Paragraph.propTypes = {
   children: PropTypes.string,
 
   element: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6", "p"])
@@ -18,9 +18,9 @@ FormaParagraph.propTypes = {
 
 
 
-FormaParagraph.defaultProps = {
+Paragraph.defaultProps = {
   children: "Please change ParagraphText",
   element: "p"
 };
 
-export { FormaParagraph as default };
+export { Paragraph as default };

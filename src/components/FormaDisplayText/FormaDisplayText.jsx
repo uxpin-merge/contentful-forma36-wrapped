@@ -1,16 +1,16 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { DisplayText } from '@contentful/forma-36-react-components';
+import { DisplayText as DisplayTextM } from '@contentful/forma-36-react-components';
 
 
-const FormaDisplayText = (props) => (
-  <DisplayText {...props}>
+const DisplayText = (props) => (
+  <DisplayTextM {...props}>
     {props.children}
-  </DisplayText>
+  </DisplayTextM>
 );
 
 
-FormaDisplayText.propTypes = {
+DisplayText.propTypes = {
   children: PropTypes.string,
 
   size: PropTypes.oneOf(["large", "huge"]),
@@ -20,10 +20,10 @@ FormaDisplayText.propTypes = {
 
 
 
-FormaDisplayText.defaultProps = {
+DisplayText.defaultProps = {
   children: "Please change displayText",
   size: "large",
   element: "h1"
 };
 
-export { FormaDisplayText as default };
+export { DisplayText as default };

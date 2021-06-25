@@ -1,14 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { RadioButton } from '@contentful/forma-36-react-components';
+import { RadioButton as RadioButtonM } from '@contentful/forma-36-react-components';
 
 
-const FormaRadioButton = (props) => (
-  <RadioButton {...props} />
+const RadioButton = (props) => (
+  <RadioButtonM {...props} />
 );
 
 
-FormaRadioButton.propTypes = {
+RadioButton.propTypes = {
   name: PropTypes.string,
 
   required: PropTypes.bool,
@@ -35,4 +35,4 @@ FormaRadioButton.propTypes = {
   indeterminate: PropTypes.bool,
 };
 
-export { FormaRadioButton as default };
+export { RadioButton as default };

@@ -1,14 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { Checkbox } from '@contentful/forma-36-react-components';
+import { Checkbox as CheckboxM } from '@contentful/forma-36-react-components';
 
 
-const FormaCheckbox = (props) => (
-  <Checkbox {...props} />
+const Checkbox = (props) => (
+  <CheckboxM {...props} />
 );
 
 
-FormaCheckbox.propTypes = {
+Checkbox.propTypes = {
   required: PropTypes.bool,
 
   labelText: PropTypes.string,
@@ -35,4 +35,4 @@ FormaCheckbox.propTypes = {
   indeterminate: PropTypes.bool,
 };
 
-export { FormaCheckbox as default };
+export { Checkbox as default };

@@ -1,19 +1,19 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { TextField } from '@contentful/forma-36-react-components';
+import { TextField as TextFieldM } from '@contentful/forma-36-react-components';
 
 
-function FormaTextField(props) {
+function TextField(props) {
   const { placeholder, maxLength, disabled, ...other } = props;
   return (
-    <TextField {...other} textInputProps={{ placeholder, maxLength, disabled }}>
+    <TextFieldM {...other} textInputProps={{ placeholder, maxLength, disabled }}>
       {props.children}
-    </TextField>
+    </TextFieldM>
   )
 };
 
 
-FormaTextField.propTypes = {
+TextField.propTypes = {
   /**
   * The text for the label of the input element
   * */
@@ -24,25 +24,25 @@ FormaTextField.propTypes = {
    */
   placeholder: PropTypes.string,
 
-  /** 
+  /**
    * The text value for the input element
    * @uxpinignoreprop
    * @uxpinpropname input value
-   * */  
+   * */
   value: PropTypes.string,
 
-  /** 
+  /**
    * The id for the input element
    * @uxpinignoreprop
    * @uxpinpropname input id
-   * */  
+   * */
   id: PropTypes.string,
 
-  /** 
+  /**
    * The form related name for the input element
    * @uxpinignoreprop
    * @uxpinpropname input name
-   * */  
+   * */
   name: PropTypes.string,
 
   /**
@@ -99,7 +99,7 @@ FormaTextField.propTypes = {
 };
 
 
-FormaTextField.defaultProps = {
+TextField.defaultProps = {
  labelText: "Label Text prop",
  placeholder: "Placeholder prop",
  required: true,
@@ -109,4 +109,4 @@ FormaTextField.defaultProps = {
  validationMessage: "Validation Message prop",
 };
 
-export { FormaTextField as default };
+export { TextField as default };
