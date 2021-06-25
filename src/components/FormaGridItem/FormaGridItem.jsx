@@ -10,7 +10,8 @@ const GridItem = (props) => (
 GridItem.propTypes = {
 
   /**
-  * Child nodes to be rendered in the component */
+  * Child nodes to be rendered in the component
+  * @uxpinignoreprop */
   children: PropTypes.node,
   /**
    * one of grid-column-start css values */
