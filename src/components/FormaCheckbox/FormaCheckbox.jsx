@@ -13,6 +13,8 @@ FormaCheckbox.propTypes = {
 
   labelText: PropTypes.string,
 
+  name: PropTypes.string,
+
   /**
    * @uxpinbind onChange 0.target.checked
    */
@@ -28,13 +30,9 @@ FormaCheckbox.propTypes = {
 
   disabled: PropTypes.bool,
 
+  willBlurOnEsc: PropTypes.bool,
+
   indeterminate: PropTypes.bool,
-};
-
-
-
-FormaCheckbox.defaultProps = {
-  checked: true,
 };
 
 export { FormaCheckbox as default };
