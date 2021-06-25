@@ -2,37 +2,35 @@ import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { RadioButton as RadioButtonM } from '@contentful/forma-36-react-components';
 
-
-const RadioButton = (props) => (
-  <RadioButtonM {...props} />
-);
+/**
+ * @uxpinwrappers
+ * NonResizableWrapper
+ */
+const RadioButton = (props) => {
+  const { uxpinRef, ...other } = props;
+  return (
+    <div style={{width: "fit-content"}} ref={uxpinRef}>
+    <RadioButtonM  {...other} /></div>
+  )
+};
 
 
 RadioButton.propTypes = {
   name: PropTypes.string,
-
-  required: PropTypes.bool,
-
   labelText: PropTypes.string,
-
+  value: PropTypes.string,
   /**
    * @uxpinbind onChange 0.target.checked
    */
   checked: PropTypes.bool,
-
+  required: PropTypes.bool,
+  indeterminate: PropTypes.bool,
+  disabled: PropTypes.bool,
+  willBlurOnEsc: PropTypes.bool,
   onChange: PropTypes.func,
-
   onBlur: PropTypes.func,
-
   onFocus: PropTypes.func,
 
-  value: PropTypes.string,
-
-  disabled: PropTypes.bool,
-
-  willBlurOnEsc: PropTypes.bool,
-
-  indeterminate: PropTypes.bool,
 };
 
 export { RadioButton as default };
