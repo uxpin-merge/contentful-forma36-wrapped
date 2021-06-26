@@ -54,6 +54,8 @@ module.exports = {
           'src/components/Workbench/Workbench.jsx',
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
           'src/components/WorkbenchContent/WorkbenchContent.jsx',
+          'src/components/WorkbenchSidebar/WorkbenchSidebar.jsx',
+
         ],
       },
     ],

@@ -154,7 +154,7 @@ const Workbench = (props) => (
     <WorkbenchM.Header
       title={props.title}
       description={props.description}
-      icon={<Icon icon={props.icon} />}
+      icon={props.icon != "none" && <Icon icon={props.icon} />}
       actions={<Button buttonType="muted" onClick={props.hdrOnClick}>{props.buttonLabel}</Button>}
       onChange={props.onChange}
       onBack={

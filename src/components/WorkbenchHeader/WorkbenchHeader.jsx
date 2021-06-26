@@ -3,6 +3,7 @@ import * as React from 'react';
 import  { Workbench, Icon, Button }  from '@contentful/forma-36-react-components';
 
 const buttonIcons = [
+  'none',
   'Heading',
   'ArrowDown',
   'ArrowDownTrimmed',
@@ -150,8 +151,8 @@ const WorkbenchHeader = (props) => (
     <Workbench.Header
     title={props.title}
     description={props.description}
-      actions={<Button buttonType="muted" onClick={props.onClick}>{props.buttonLabel}</Button>}
-      icon={<Icon icon={props.icon} />}
+      actions={<>{props.children} <Button buttonType="muted" onClick={props.onClick}>{props.buttonLabel}</Button></>}
+      icon={props.icon != "none" && <Icon icon={props.icon} />}
       onBack={
         props.backBtn
         // If backBtn prop = true
