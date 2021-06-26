@@ -53,6 +53,7 @@ module.exports = {
           'src/components/FormaValidationMessage/FormaValidationMessage.jsx',
           'src/components/Workbench/Workbench.jsx',
           'src/components/WorkbenchHeader/WorkbenchHeader.jsx',
+          'src/components/WorkbenchContent/WorkbenchContent.jsx',
         ],
       },
     ],
