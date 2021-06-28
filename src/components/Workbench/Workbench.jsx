@@ -155,7 +155,7 @@ const Workbench = (props) => (
       title={props.title}
       description={props.description}
       icon={props.icon != "none" && <Icon icon={props.icon} />}
-      actions={<Button buttonType="muted" onClick={props.hdrOnClick}>{props.buttonLabel}</Button>}
+      actions={<Button buttonType={props.buttonType} onClick={props.hdrOnClick}>{props.buttonLabel}</Button>}
       onChange={props.onChange}
       onBack={
         props.backBtn
@@ -187,9 +187,15 @@ Workbench.propTypes = {
   icon: PropTypes.oneOf(buttonIcons),
 
   /**
-  * Label of buttton in the header
+  * Label of button in the header
   */
   buttonLabel: PropTypes.string,
+
+  /**
+  * The button variant
+  * @uxpinpropname  Button Variant
+  */
+  buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative", "muted"]),
 
   /**
   * Display Back button on header
@@ -223,6 +229,7 @@ Workbench.defaultProps = {
   buttonLabel: "Click",
   title: "Page title",
   icon: "ArrowDown",
+  buttonType: "muted",
   hdrOnClick: () => undefined
 };
 

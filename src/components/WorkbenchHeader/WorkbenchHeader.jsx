@@ -151,7 +151,7 @@ const WorkbenchHeader = (props) => (
     <Workbench.Header
     title={props.title}
     description={props.description}
-      actions={<>{props.children} <Button buttonType="muted" onClick={props.onClick}>{props.buttonLabel}</Button></>}
+      actions={<>{props.children} <Button buttonType={props.buttonType} onClick={props.onClick}>{props.buttonLabel}</Button></>}
       icon={props.icon != "none" && <Icon icon={props.icon} />}
       onBack={
         props.backBtn
@@ -179,7 +179,18 @@ WorkbenchHeader.propTypes = {
  icon: PropTypes.oneOf(buttonIcons),
 
  /**
- * Label of buttton in the header
+ * Label of button in the header
+ */
+ buttonLabel: PropTypes.string,
+
+/**
+* The button variant
+* @uxpinpropname  Button Variant
+*/
+buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative", "muted"]),
+
+/**
+ * Label of button in the header
  */
  buttonLabel: PropTypes.string,
 
@@ -213,7 +224,8 @@ WorkbenchHeader.defaultProps = {
   description: "This is the description",
   buttonLabel: "Click",
   title: "Page title",
-  icon:"ArrowDown",
+  icon:"none",
+  buttonType: "muted",
   onClick: () => undefined
 };
 

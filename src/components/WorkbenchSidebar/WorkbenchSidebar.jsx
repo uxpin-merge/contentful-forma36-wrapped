@@ -1,12 +1,14 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 import { WorkbenchSidebar as WorkbenchSidebartM } from '@contentful/forma-36-react-components';
+import { Flex as FlexM } from '@contentful/forma-36-react-components';
 
 const WorkbenchSidebar = (props) => (
-  
-  <WorkbenchSidebartM {...props} >
-    {props.children}
+  <FlexM fullHeight={true}>
+  <WorkbenchSidebartM position={props.position} >
+    {props.children}xxxxx
   </WorkbenchSidebartM>
+  </FlexM>
 );
 
 WorkbenchSidebar.propTypes = {
