@@ -43,6 +43,7 @@ module.exports = {
           'src/components/FormaModal/FormaModal.jsx',
           'src/components/FormaNote/FormaNote.jsx',
           'src/components/FormaPill/FormaPill.jsx',
+          'src/components/ProductIcon/ProductIcon.jsx',
           'src/components/FormaSpinner/FormaSpinner.jsx',
           'src/components/FormaSwitch/FormaSwitch.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',

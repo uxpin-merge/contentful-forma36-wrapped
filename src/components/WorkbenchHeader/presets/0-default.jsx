@@ -10,8 +10,8 @@ export default (
     buttonLabel= "Click"
     title= "Page title"
     icon="none"
-    buttonType= "muted"
+    buttonType= "positive"
   >
-  <FormaButton uxpId="Workbench-button-1" buttonType="muted" label="Click"/>
+  <FormaButton uxpId="Workbench-button-1" buttonType="positive" label="Save"/>
   </WorkbenchHeader>
 );
