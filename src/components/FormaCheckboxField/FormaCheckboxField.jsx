@@ -26,6 +26,9 @@ CheckboxField.propTypes = {
 
   required: PropTypes.bool,
 
+  /**
+   * @uxpinbind onChange 0.target.checked
+   */
   checked: PropTypes.bool,
 
   labelIsLight: PropTypes.bool,
