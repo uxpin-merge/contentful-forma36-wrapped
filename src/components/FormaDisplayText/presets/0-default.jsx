@@ -1,10 +1,10 @@
 import React from 'react';
-import FormaDisplayText from '../FormaDisplayText';
+import DisplayTextM from '../FormaDisplayText';
 
 export default (
-  <FormaDisplayText
+  <DisplayTextM
     uxpId="displayText-1"
     size="large"
     element="h1"
-  >Display Text</FormaDisplayText>
+  >Display Text</DisplayTextM>
 );
