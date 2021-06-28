@@ -48,6 +48,7 @@ module.exports = {
           'src/components/FormaSwitch/FormaSwitch.jsx',
           'src/components/FormaTabs/FormaTabs.jsx',
           'src/components/FormaTab/FormaTab.jsx',
+          'src/components/TabPanel/TabPanel.jsx',
           'src/components/FormaTag/FormaTag.jsx',
           'src/components/FormaTextLink/FormaTextLink.jsx',
           'src/components/FormaTooltip/FormaTooltip.jsx',
