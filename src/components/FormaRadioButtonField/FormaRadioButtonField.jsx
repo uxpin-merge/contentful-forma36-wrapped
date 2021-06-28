@@ -1,50 +1,22 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
-import { RadioButtonField } from '@contentful/forma-36-react-components';
+import { RadioButtonField as RadioButtonFieldM } from '@contentful/forma-36-react-components';
 
-function FormaRadioButtonField() {
-  const [activeOption, setActiveOption] = React.useState('yes');
-
-  return (
-    <div>
-      <RadioButtonField
-        name="radio option 1"
-        id="RadioButton1"
-        value="yes"
-        checked={activeOption === 'yes'}
-        onChange={(e) => {
-          setActiveOption(e.target.value);
-        }}
-        labelText="Radio button checked"
-        helpText="Helper text displayed below"
-      />
-      <RadioButtonField
-        name="radio option 2"
-        id="RadioButton2"
-        value="no"
-        checked={activeOption === 'no'}
-        onChange={(e) => {
-          setActiveOption(e.target.value);
-        }}
-        labelText="Second option"
-        helpText="Helper text displayed below"
-      />
-    </div>
-  );
-}
+const RadioButtonField = (props) => (
+  <RadioButtonFieldM {...props} />
+);
 
 
-FormaRadioButtonField.propTypes = {
-  disabled: PropTypes.bool,
-  labelIsLight: PropTypes.bool,
+RadioButtonField.propTypes = {
+  labelText: PropTypes.string,
   validationMessage: PropTypes.string,
+  helpText: PropTypes.string,
+  disabled: PropTypes.bool,
+  name: PropTypes.string,
+  required: PropTypes.bool,
+  checked: PropTypes.bool,
+  labelIsLight: PropTypes.bool,
+  onChange: PropTypes.func,
 };
 
-FormaRadioButtonField.defaultProps = {
-  checked: true,
-  disabled: false,
-  labelIsLight: false,
-  validationMessage: "validation message"
-};
-
-export { FormaRadioButtonField as default };
+export { RadioButtonField as default };

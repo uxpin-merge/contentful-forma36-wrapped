@@ -1,11 +1,15 @@
 import React from 'react';
-import FormaRadioButtonField from '../FormaRadioButtonField';
+import RadioButtonField from '../FormaRadioButtonField';
 
 export default (
-  <FormaRadioButtonField
-    uxpId="forma-radio-button-field-1"
-    disabled={false}
-    labelIsLight={false}
+  <RadioButtonField
+    uxpId="radio-button-field-1"
+    labelText="some label text"
     validationMessage="validation message"
+    helpText="help text"
+    disabled={false}
+    required={false}
+    checked={false}
+    labelIsLight={false}
   />
 );
