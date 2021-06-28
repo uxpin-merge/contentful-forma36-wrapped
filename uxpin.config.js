@@ -17,9 +17,9 @@ module.exports = {
         name: 'Form Elements',
         include: [
           'src/components/FormaCheckbox/FormaCheckbox.jsx',
-          // 'src/components/FormaCheckboxField/FormaCheckboxField.jsx',
+          'src/components/FormaCheckboxField/FormaCheckboxField.jsx',
           'src/components/FormaRadioButton/FormaRadioButton.jsx',
-          // 'src/components/FormaRadioButtonField/FormaRadioButtonField.jsx',
+          'src/components/FormaRadioButtonField/FormaRadioButtonField.jsx',
           'src/components/FormaTextField/FormaTextField.jsx',
         ],
       },
