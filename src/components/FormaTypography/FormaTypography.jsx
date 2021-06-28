@@ -11,6 +11,9 @@ const Typography = (props) => (
 
 
 Typography.propTypes = {
+  /**
+   * The nested children components
+   */
   children: PropTypes.node,
 };
 

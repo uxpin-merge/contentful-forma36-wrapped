@@ -19,7 +19,7 @@ DisplayText.propTypes = {
   /**
    * The size of text
    */
-  size: PropTypes.oneOf(["large", "huge"]),
+  size: PropTypes.oneOf(["default", "large", "huge"]),
   /**
    * The html tag to use
    */
