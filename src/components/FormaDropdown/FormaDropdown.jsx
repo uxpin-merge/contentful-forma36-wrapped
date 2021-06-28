@@ -17,7 +17,7 @@ function Dropdown(props) {
       onClose={() => setOpen(false)}
       toggleElement={
         <Button
-          size="small"
+          size={props.size}
           buttonType="muted"
           indicateDropdown
           onClick={() => setOpen(!isOpen)}
@@ -40,6 +40,11 @@ Dropdown.propTypes = {
   * @uxpinpropname Label
   */
   submenuToggleLabel: PropTypes.string,
+
+   /**
+   * @uxpinpropname Toggle Size
+   */
+    size: PropTypes.oneOf(["small", "medium", "large"]),
 
   /**
    * @uxpinignoreprop
@@ -71,6 +76,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   triggerText: "This is the button text",
+  size: "medium",
   submenuToggleLabel: "Dropdown label",
   isOpen:false
 };

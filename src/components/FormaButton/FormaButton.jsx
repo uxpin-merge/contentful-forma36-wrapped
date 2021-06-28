@@ -163,7 +163,7 @@ Button.propTypes = {
    * Below we change prop name in UXPin
    * @uxpinpropname  Variant
    */
-  buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative"]),
+  buttonType: PropTypes.oneOf(["primary", "secondary", "positive", "negative", "muted"]),
 
   /**
    * Button size

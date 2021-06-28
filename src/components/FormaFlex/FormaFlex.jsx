@@ -68,6 +68,7 @@ Flex.propTypes = {
 
     /**
     * Child nodes to be rendered in the component: PropTypes.string,
+    * @uxpinignoreprop
     */
     children: PropTypes.node,
 

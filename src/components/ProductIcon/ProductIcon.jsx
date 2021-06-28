@@ -43,14 +43,18 @@ ProductIcon.propTypes = {
     * The color of the Product Icon
     */
   color: PropTypes.oneOf(['primary', 'positive', 'negative', 'warning', 'secondary', 'muted', 'white']),
+
+  /**
+  * * @uxpinignoreprop
+  */
   tag: PropTypes.oneOf(['div', 'span']),
 
 };
 
 
 ProductIcon.defaultProps = {
-icon: 'Apps',
-size: 'large'
+  icon: 'Apps',
+  size: 'large'
 };
 
 export { ProductIcon as default };
