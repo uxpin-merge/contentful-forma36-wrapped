@@ -4,7 +4,9 @@ import { Paragraph as ParagraphM } from '@contentful/forma-36-react-components';
 
 
 const Paragraph = (props) => (
-  <ParagraphM {...props}>
+  <ParagraphM {...props} 
+    
+    style={props.isBold ? {fontWeight: "bold"} : null}>
     {props.children}
   </ParagraphM>
 );
@@ -16,6 +18,10 @@ Paragraph.propTypes = {
    * @uxpinpropname  Text
    */
   children: PropTypes.string,
+  /**
+   * Is the text bold
+   */
+  isBold: PropTypes.bool,
 
   /**
    * The html tag to use
