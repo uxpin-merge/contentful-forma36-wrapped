@@ -41,7 +41,7 @@ function Tabs(props) {
 
   let allPanels = panelArray.map((item, i) => {
     return (
-      selected === i && <TabPanel id={i} key={`tabs-${i}`} {...item.props}>{item.props.children}</TabPanel>
+      selected === i && <TabPanel id={i} key={`tabs-${i}`} style={{marginTop: "1.5em"}}{...item.props}>{item.props.children}</TabPanel>
     );
   });
 
