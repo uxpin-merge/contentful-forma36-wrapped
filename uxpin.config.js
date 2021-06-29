@@ -36,6 +36,7 @@ module.exports = {
           'src/components/FormaEntityList/FormaEntityList.jsx',
           'src/components/FormaEntityListItem/FormaEntityListItem.jsx',
           'src/components/FormaFlex/FormaFlex.jsx',
+          'src/components/FormaFlexGroup/FormaFlexGroup.jsx',
           'src/components/FormaGrid/FormaGrid.jsx',
           'src/components/FormaGridItem/FormaGridItem.jsx',
           'src/components/FormaIcons/FormaIcons.jsx',
