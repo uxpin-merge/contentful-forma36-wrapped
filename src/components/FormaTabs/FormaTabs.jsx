@@ -12,20 +12,19 @@ function Tabs(props) {
 
   const [selected, setSelected] = useState(props.selected);
 
-  //Create an array from children that are Tab
   const tabsArray = [];
   React.Children.map(props.children, (child, index) => (
     child.props.componentType === "Tab" ? tabsArray.push(child) : null));
 
- //Create an array from children that are Tab Panels
   const panelArray = [];
   React.Children.map(props.children, (child, index) => (
     child.props.componentType === "TabPanel" ? panelArray.push(child) : null));
 
-  // console.log("tabs", tabsArray)
-  // console.log("panels", panelArray)
 
-  //Create the tabs
+  console.log("tabs", tabsArray)
+  console.log("panels", panelArray)
+
+
   let allTabs = tabsArray.map((item, i) => {
     return (
       <Tab {...item.props}
@@ -34,27 +33,31 @@ function Tabs(props) {
         selected={
           selected === i}
         onSelect={() => handleClick(i)}
-      >
-        {item.props.children}
+      >{item.props.children}
+
       </Tab>
     );
   });
 
-  //Create the tab panels
   let allPanels = panelArray.map((item, i) => {
     return (
       selected === i && <TabPanel id={i} key={`tabs-${i}`} {...item.props}>{item.props.children}</TabPanel>
     );
   });
 
+
+  function handleClick(tabId) {
+    setSelected(tabId);
+
+  }
+
+
   return (
   <>
     <TabsM {...props} >
       {allTabs}
     </TabsM>
-    <div style={{marginTop: "1.5em"}}>
     {allPanels}
-    </div>
   </>
   )
 
@@ -62,24 +65,13 @@ function Tabs(props) {
 
 /* eslint-disable sort-keys */
 Tabs.propTypes = {
-   /**
-  * @uxpinignoreprop
-  */
   children: PropTypes.node,
-  /**
-  * The number of the selected tab starting with 0
-  */
-  selected: PropTypes.number,
-  /**
-  * Does iit have a divider
-  */
-  withDivider: PropTypes.bool,
-  /**
-  * The orientation of the divider if dividerOrientation = true
-  */
   dividerOrientation: PropTypes.oneOf(["horizontal", "vertical"]),
   role: PropTypes.oneOf(["tablist", "navigation"]),
+  withDivider: PropTypes.bool,
+  // onSelect: PropTypes.func,
   onClick: PropTypes.func,
+  selected: PropTypes.number
 };
 /* eslint-enable sort-keys */
 
