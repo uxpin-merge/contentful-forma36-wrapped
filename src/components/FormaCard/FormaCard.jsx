@@ -14,7 +14,7 @@ Card.propTypes = {
   /**
   * Child nodes to be rendered in the component
   * */
-  children: PropTypes.string,
+  children: PropTypes.node,
   /**
   * Applies padding styles of different sizes
   * */
